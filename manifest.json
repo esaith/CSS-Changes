@@ -1,0 +1,13 @@
+{
+  "name": "CSS Changes",
+  "version": "0.1",
+  "description": "Get CSS changes",
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "<all_urls>"
+  ],
+  "manifest_version": 2
+}

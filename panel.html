@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-size: 14px;
+        }
+        ul {
+            padding: 0 30px;
+            margin: 0;
+            list-style: none;
+        }
+
+        .added {
+            color: #5e799e;
+        }
+
+        .removed {
+            color: red;
+        }
+
+        .original {
+            color: #113824;
+        }
+
+        .modified {
+            color: #257c50;
+        }
+        .nochanges {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            color: gray;
+        }
+
+        .section {
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="styles"></div>    
+    <script src="panel.js"></script>
+    <script src="diff.js"></script>
+</body>
+</html>

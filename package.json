@@ -1,0 +1,20 @@
+{
+  "name": "css-changes",
+  "version": "1.0.1",
+  "description": "Chrome extension for to view CSS changes that have been made during the page visit.",
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "eSaith",
+  "license": "ISC"
+}
