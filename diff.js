@@ -143,12 +143,14 @@ var esaith_CSSChanges = (function () {
             rawCSS = rawCSS.substring(firstBracketIndex);
 
             // Parse properties into objects
-            if (rawCSS.indexOf('keyframes') === -1) {
+            if (rawCSS.indexOf('keyframes') === -1 && rawCSS.indexOf('@media') === -1) {
                 props = parseProps(rawCSS)
 
                 // Save property objects (ie, obj['#myDiv'] = { 'color': 'blue' }
                 obj[selector] = props;
-            }
+            } else {
+				console.log('skipping parsing of raw css', rawCSS);				
+			}
         }
 
         return obj;
@@ -191,7 +193,7 @@ var esaith_CSSChanges = (function () {
                     if (original[selector].hasOwnProperty(prop)) {
                         if (modified[selector] && original[selector] &&
                             (original[selector][prop] === modified[selector][prop] ||
-                            (original[selector][prop] && original[selector][prop].indexOf('â') > -1) || ( modified[selector][prop] && modified[selector][prop].indexOf('â') > -1))) {  // ignore any funky symbols 
+                                (original[selector][prop] && original[selector][prop].indexOf('â') > -1) || (modified[selector][prop] && modified[selector][prop].indexOf('â') > -1))) {  // ignore any funky symbols 
                             definition += '<li>' + prop + ': ' + original[selector][prop] + ';</li>';
                         } else {
                             if (modified[selector] && modified[selector][prop]) {
